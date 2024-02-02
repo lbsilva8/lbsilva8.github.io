@@ -1,0 +1,51 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.background-image {
+  background-image: url(./assets/background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.button-links {
+  border: 1px solid #6663E5;
+  background: rgb(72, 50, 204, 0.74);
+  color: #ffffff;
+  width: 15%;
+  border-radius: 10px;
+}
+
+.button-links:hover {
+  background: #6663E5;
+  color: white;
+  transition: 0.5s;
+}
+
+.section-sobre {
+  background-color: #161616;
+  color: white;
+  font-weight: 500;
+}
+
+.subtitle-developer {
+  color: #6663E5;
+}
+
+.text-sobre {
+  color: #868686;
+}
+
+.image-profile {
+  max-width: 50%;
+}
+
+.section-projetos {
+  background-color: #222222;
+  color: white;
+}
