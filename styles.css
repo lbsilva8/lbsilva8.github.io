@@ -21,6 +21,16 @@
   border-radius: 10px;
 }
 
+@media (max-width: 550px) {
+  .btn-links {
+    display: grid;
+  }
+
+  .button-links {
+    width: auto;
+  }
+}
+
 .button-links:hover {
   background: #6663E5;
   color: white;
