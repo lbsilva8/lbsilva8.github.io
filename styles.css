@@ -6,7 +6,7 @@
 }
 
 .background-image {
-  background-image: url(./assets/background.jpeg);
+  background-image: url(./assets/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,5 +47,57 @@
 
 .section-projetos {
   background-color: #222222;
+  color: white;
+}
+
+.section-contatos {
+  background-color: #161616;
+  color: white;
+}
+
+.icone-contato p {
+  color: #707070;
+  font-weight: 300;
+  margin: 0;
+}
+
+.icone-contato img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+.icone-contato {
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-contato input {
+  width: 100%;
+  border: 1 px solid #707070;
+  background: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.form-contato textarea {
+  width: 100%;
+  border: 1 px solid #707070;
+  background: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.form-contato button {
+  width: 100%;
+  background-color: #6663E5;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
   color: white;
 }

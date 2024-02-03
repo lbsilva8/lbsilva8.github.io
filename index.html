@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Portifólio Lorena</title>
   </head>
   <body>
@@ -26,8 +27,12 @@
         <h1>Olá, eu sou a Lorena!</h1>
         <p>Esse é um espaço para você me conhecer melhor</p>
         <div class="d-flex-center justify-content-center mt-5">
-          <button class="button-links p-2 m-2">Meu GitHub</button>
-          <button class="button-links p-2 m-2">Meu LinkedIn</button>
+          <a href="https://github.com/lbsilva8" target="_blank" rel="noopener noreferrer" class="link-opacity-10">
+            <button class="button-links p-2 m-2">Meu GitHub</button>
+          </a>
+          <a href="https://www.linkedin.com/in/lorenadasilvaborges/" target="_blank" rel="noopener noreferrer" class="link-opacity-10">
+            <button class="button-links p-2 m-2">Meu LinkedIn</button>
+          </a>
         </div>
       </div>
     </section>
@@ -39,7 +44,7 @@
             <p class="subtitle-developer">Estudante de programação</p>
             <div class="text-sobre fw-light pe-2">
               <p class="mb-2">Formada em Engenharia de Produção pela UFG e pós graduada em Desenvolvimento Full Stack pela PUC-RJ.</p>
-              <p class="mb-2">Tenho experiência em compras, com foco além das atividades gerais, também em projetos de automatização utilizando metodologias ágeis.</p>
+              <p class="mb-2">Tenho experiência em compras, com foco além das atividades gerais, também em projetos de automatização de tarefas utilizando metodologias ágeis.</p>
               <p class="mb-2">Passo por uma transição de carreira onde busco implementar os conhecimentos adquiridos em estudos e durante minha trajetória, para isso almejo  uma oportunidade para atuar na área de TI, com programação e automatização de atividades com análise de dados.</p>
             </div>
           </div>
@@ -53,7 +58,54 @@
         <h1>Meus projetos</h1>
       </div>
     </section>
+    <section class="section-contatos py-5">
+      <div class="container text-center">
+        <h1 class="mb-5">Meus Contatos</h1>
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex icone-contato">
+              <img src="./assets/telefone.png" alt="celular">
+              <p>(64) 9 9942-8742</p>
+            </div>
+            <div class="d-flex icone-contato">
+              <img src="./assets/email.png" alt="email">
+              <p>sborges.lorena@gmail.com</p>
+            </div>
+            <div class="d-flex icone-contato">
+              <img src="./assets/github.png" alt="github">
+              <p>@lbsilva8</p>
+            </div>
+            <div class="d-flex icone-contato">
+              <img src="./assets/linkedin.png" alt="linkedin">
+              <p>@Lorena Borges</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <form action="" class="form-contato">
+              <input type="text" placeholder="Seu nome" id="nome" />
+              <input type="text" placeholder="Seu email" id="email">
+              <textarea name="" cols="30" id="mensagem" rows="10" placeholder="Digite aqui a sua mensagem"></textarea>
+              <button type="button" id="btn">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.getElementById('btn').addEventListener('click', (event) => {
+        const name = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('mensagem').value;
 
+        Email.send({
+          SecureToken: '4f296f12-b76b-40d0-9c20-9a9c07bdf4ec',
+          To: 'sborges.lorena@gmail.com',
+          From: 'lorenasborges08@hotmail.com',
+          Subject: `[${email}] Contato`,
+          Body: `Email do site <br/> Nome: ${name} <br/> Email: ${email} <br/> Mensagem: ${message}`,
+        }).then(message => alert(message));
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
