@@ -16,8 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <title>Portifólio Lorena</title>
+    <title>Portfolio Lorena</title>
   </head>
   <body>
     <section>
@@ -41,78 +40,94 @@
         <div class="row align-items-center">
           <div class="col-12 col-lg-6">
             <h3>Sobre mim</h3>
-            <p class="subtitle-developer">Estudante de programação</p>
-            <div class="text-sobre fw-light pe-2">
-              <p class="mb-2">Formada em Engenharia de Produção pela UFG e pós graduada em Desenvolvimento Full Stack pela PUC-RJ.</p>
+            <p class="subtitle">Estudante de programação</p>
+            <div class="text-desciption fw-light pe-2">
+              <p class="mb-2">Formada em Engenharia de Produção pela UFG e pós graduada em Desenvolvimento Full Stack pela PUC-RJ, atualmente estudo Ciência da Computação.</p>
               <p class="mb-2">Tenho experiência em compras, com foco além das atividades gerais, também em projetos de automatização de tarefas utilizando metodologias ágeis.</p>
-              <p class="mb-2">Passo por uma transição de carreira onde busco implementar os conhecimentos adquiridos em estudos e durante minha trajetória, para isso almejo  uma oportunidade para atuar na área de TI, com programação e automatização de atividades com análise de dados.</p>
+              <p class="mb-2">Passo por uma transição de carreira onde busco implementar os conhecimentos adquiridos em estudos e durante minha trajetória, para isso almejo  uma oportunidade para atuar na área de TI, com programação.</p>
             </div>
           </div>
           <div class="col-12 col-lg-6 text-center p-3">
-            <img src="./assets/fotoPerfil.png" class="image-profile img-fluid" alt="foto de perfil">
+            <img src="./assets/img/fotoPerfil.png" class="image-profile img-fluid" alt="foto de perfil">
           </div>
       </div>
     </section>
     <section class="section-projetos py-5">
       <div class="container text-center">
-        <h1>Meus projetos</h1>
-        <div class="projetos p-5">
-          <p> 🚧  Em construção  🚧</p>
+        <h1 class="mb-5">Meus projetos</h1>
+        <div class="row align-items-start">
+          <div class="div-projetos col-12 col-xl-4 p-3">
+            <img src="./assets/img/projetos/projeto1.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
+            <h5 class="m-3">
+              <a href="https://github.com/lbsilva8/puc-mvp2-front" target="_blank" class="subtitle text-decoration-none ">Meu jardim virtual</a>
+            </h5>
+            <p class="text-desciption-project fw-light font-size-">Pojeto desenvolvido durante a pós graduação: meu jardim virtual é um projeto que traz informações sobre plantas. Temos uma página inicial com a explicação do projeto, uma página com a lista de plantas e suas caracteristicas e uma página com detalhes da planta escollhida.</p>
+              <div class="language align-items-center">
+                <img src="./assets/img/tecnologias/react.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/js.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/html.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/css.png" alt="Imagem tecnologia">
+              </div>
+          </div>
+          <div class="div-projetos col-12 col-xl-4 p-3">
+            <img src="./assets/img/projetos/projeto2.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
+            <h5 class="m-3">
+              <a href="https://github.com/lbsilva8/marte-101-api" target="_blank" class="subtitle text-decoration-none ">Marte 101</a>
+            </h5>
+            <p class="text-desciption-project fw-light font-size-">Pojeto desenvolvido durante o Orion bootcamp: Backend desenvolvido em equipe e contando com POs. Foi utilizado mysql como banco de dados, jwt para autenticação de usuário e nodemailer para serviço de envio de e-mails. Nessa aplicação teremos a parte de usuário, onde poderá ser realizado o cadastro, recuperação de senha, bem como login/logout e também a parte logada, onde o usuário poderá acessar os dados dos sois e suas informações por meio de uma API externa.</p>
+              <div class="language align-items-center">
+                <img src="./assets/img/tecnologias/typescript.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/mysql.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/docker.png" alt="Imagem tecnologia">
+              </div>
+          </div>
+          <div class="div-projetos col-12 col-xl-4 p-3">
+            <img src="./assets/img/projetos/projeto3.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
+            <h5 class="m-3">
+              <a href="https://github.com/lbsilva8/Front_WitchBook_project" target="_blank" class="subtitle text-decoration-none ">WitchBook</a>
+            </h5>
+            <p class="text-desciption-project fw-light font-size-">Projeto desenvolvido durante a semana do heroi - Hero Code: sistema de pesquisa de livros.</p>
+              <div class="language align-items-center">
+                <img src="./assets/img/tecnologias/react.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/typescript.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/tailwindcss.png" alt="Imagem tecnologia">
+                <img src="./assets/img/tecnologias/mongo.png" alt="Imagem tecnologia">
+              </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section-contatos py-5">
       <div class="container text-center">
         <h1 class="mb-5">Meus Contatos</h1>
-        <div class="row">
+        <div class="row mb-5">
           <div class="col-12 col-lg-6">
             <div class="d-flex icone-contato">
-              <img src="./assets/telefone.png" alt="celular">
-              <p>(64) 9 9942-8742</p>
+              <img src="./assets/img/contatos/telefone.png" alt="celular">
+              <a href="tel:5564999428742" target="_blank" class="text-desciption text-decoration-none ">(64) 9 9942-8742</a>
             </div>
             <div class="d-flex icone-contato">
-              <img src="./assets/email.png" alt="email">
-              <p>sborges.lorena@gmail.com</p>
+              <img src="./assets/img/contatos/email.png" alt="email">
+              <a href="mailto:sborges.lorena@gmail.com" target="_blank" class="text-desciption text-decoration-none ">sborges.lorena@gmail.com</a>
             </div>
             <div class="d-flex icone-contato">
-              <img src="./assets/github.png" alt="github">
-              <p>@lbsilva8</p>
+              <img src="./assets/img/contatos/github.png" alt="github">
+              <a href="https://github.com/lbsilva8" target="_blank" class="text-desciption text-decoration-none ">@lbsilva8</a>
             </div>
             <div class="d-flex icone-contato">
-              <img src="./assets/linkedin.png" alt="linkedin">
-              <p>@Lorena Borges</p>
+              <img src="./assets/img/contatos/linkedin.png" alt="linkedin">
+              <a href="https://www.linkedin.com/in/lorenadasilvaborges/" target="_blank" class="text-desciption text-decoration-none ">@Lorena Borges</a>
             </div>
           </div>
-          <div class="col-12 col-lg-6">
-            <form action="" class="form-contato">
-              <input type="text" placeholder="Seu nome" id="nome" />
-              <input type="text" placeholder="Seu email" id="email">
-              <textarea name="" cols="30" id="mensagem" rows="10" placeholder="Digite aqui a sua mensagem"></textarea>
-              <button type="button" id="btn">Enviar</button>
-            </form>
+          <div class="text-desciption col-12 col-lg-6 text-center ">
+            <p class="mb-2 fw-bold">Informações: </p>
+            <p class="mb-2 ">Atualmente residindo em Catalão-GO 
+                        <br>Disponivel para mudanças <br>
+            </p>
           </div>
         </div>
+        <p class="subtitle text-end fw-light">Designed & Developed by <br>Lorena Borges  *2024<br></p>
       </div>
     </section>
-    <script>
-      document.getElementById('btn').addEventListener('click', (event) => {
-        const name = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('mensagem').value;
-
-        Email.send({
-          SecureToken: '4f296f12-b76b-40d0-9c20-9a9c07bdf4ec',
-          To: 'sborges.lorena@gmail.com',
-          From: 'lorenasborges08@hotmail.com',
-          Subject: `[${email}] Contato`,
-          Body: `Email do site <br/> Nome: ${name} <br/> Email: ${email} <br/> Mensagem: ${message}`,
-        }).then(message => alert(message));
-      });
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
