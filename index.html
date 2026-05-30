@@ -1,158 +1,388 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE doctype html>
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Lorena Borges</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio Lorena</title>
+
+    <!-- Arquivo de Estilos Externo -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-      <div
-        class="background-image vh-100 text-center d-flex flex-column justify-content-center"
-      >
-        <h1>Olá, eu sou a Lorena!</h1>
-        <p>Esse é um espaço para você me conhecer melhor</p>
-        <div class="btn-links d-flex-center justify-content-center mt-5">
-          <a href="https://github.com/lbsilva8" target="_blank" rel="noopener noreferrer" class="link-opacity-10">
-            <button class="button-links p-2 m-2">Meu GitHub</button>
-          </a>
-          <a href="https://www.linkedin.com/in/lorenadasilvaborges/" target="_blank" rel="noopener noreferrer" class="link-opacity-10">
-            <button class="button-links p-2 m-2">Meu LinkedIn</button>
-          </a>
+    <!-- NAV -->
+    <nav id="nav">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        lbsilva
+      </a>
+      <div class="nav-r">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contatos">Contato</a>
+        <button class="tog" id="tog" aria-label="Alternar tema"></button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-text" aria-hidden="true">LB</div>
+      <div class="hero-l">
+        <h1 class="hero-h1">
+          OLÁ,<br />
+          EU <span class="ys">SOU</span><br />
+          A <span class="yo">LORENA</span>
+        </h1>
+        <p class="hero-sub">
+          Engenheira de Produção que encontrou na tecnologia o espaço para
+          aplicar análise, criatividade e inovação — automatizando processos,
+          resolvendo problemas e criando soluções.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://github.com/lbsilva8"
+            target="_blank"
+            rel="noopener"
+            class="btn-p"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/lorenadasilvaborges/"
+            target="_blank"
+            rel="noopener"
+            class="btn-g"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+      <div class="hero-r">
+        <div class="hero-photo-bg"></div>
+        <img
+          src="./assets/img/fotoPerfil.png"
+          class="hero-photo"
+          alt="Lorena Borges"
+        />
+      </div>
+    </section>
+
+    <!-- SKILL BAR -->
+    <div class="skill-bar">
+      <span class="skill-bar-label">Stack</span>
+      <div class="skill-bar-divider"></div>
+      <div class="skill-chips">
+        <span class="sk">Python</span>
+        <span class="sk">Flask</span>
+        <span class="sk">PHP</span>
+        <span class="sk">Laravel</span>
+        <span class="sk">Docker</span>
+        <span class="sk">Tailwind</span>
+        <span class="sk">MySQL</span>
+        <span class="sk">ORACLE</span>
+        <span class="sk">SQLite</span>
+        <span class="sk">Metodologias Ágeis</span>
+        <span class="sk">Power BI</span>
+        <span class="sk">Pipefy</span>
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section class="sec-sobre" id="sobre">
+      <div class="sobre-g">
+        <div>
+          <span class="chip">01 — Sobre mim</span>
+          <h2 class="sobre-ht">
+            ENGENHEIRA
+            <em>&</em><br />
+            DESENVOLVEDORA
+          </h2>
+          <div class="sobre-t">
+            <p>
+              Atuo com desenvolvimento backend, mas minha trajetória começou
+              antes do código.
+            </p>
+            <p>
+              Foi na engenharia que aprendi a enxergar processos, identificar
+              gargalos e organizar soluções. Com o tempo, a necessidade de ir
+              além do operacional me levou à automação — e, naturalmente, ao
+              desenvolvimento.
+            </p>
+            <p>
+              Hoje, uno esses dois mundos no dia a dia: desenvolvo e mantenho
+              sistemas, atuo na lógica e nos dados e resolvo problemas
+              conectando tecnologia às necessidades do negócio.
+            </p>
+            <p>
+              Ao mesmo tempo, trago o olhar estruturado da engenharia para
+              organizar demandas, automatizar fluxos e integrar áreas e dados de
+              forma eficiente.
+            </p>
+            <p>
+              Também trabalho com análise e visualização de dados, criando
+              dashboards que apoiam a tomada de decisão.
+            </p>
+            <p>
+              Mais do que apenas escrever código, meu foco é construir soluções
+              que façam sentido na prática — organizadas, eficientes e pensadas
+              de ponta a ponta.
+            </p>
+          </div>
+          <div class="tags">
+            <span class="tag tag-s">Desenvolvimento WEB</span>
+            <span class="tag tag-s">Gestão de Demandas</span>
+            <span class="tag tag-s">Análise de Dados</span>
+            <span class="tag tag-s">Automatização</span>
+          </div>
+        </div>
+
+        <!-- TIMELINES (EXPERIÊNCIA E FORMAÇÃO) -->
+        <div class="timelines-container">
+          <!-- BLOCO: EXPERIÊNCIA -->
+          <div class="timeline-block">
+            <span class="chip">Experiência</span>
+            <div class="timeline-wrap">
+              <div class="timeline-scroll">
+                <!-- Sistemas Life -->
+                <div class="tc">
+                  <div class="tc-y">2024 — Atual</div>
+                  <div class="tc-n">
+                    Consultora de Processos · Sistemas Life
+                  </div>
+                  <div class="tc-d">
+                    Gerenciamento de demandas e fluxos de trabalho no Pipefy.
+                    Desenho de processos e implementação de automações
+                    inteligentes utilizando IA para otimização de rotinas.
+                  </div>
+                </div>
+
+                <!-- HPE Automotores -->
+                <div class="tc">
+                  <div class="tc-y">2024 — Atual</div>
+                  <div class="tc-n">
+                    Estagiária de Desenvolvimento TI · HPE Automotores
+                  </div>
+                  <div class="tc-d">
+                    Desenvolvimento de novas funcionalidades e correções em
+                    PHP/Laravel. Criação de queries complexas e manipulação de
+                    banco de dados Oracle. Criação de dashboards e relatórios no
+                    Power BI para análise de dados.
+                  </div>
+                </div>
+
+                <!-- FreteBras -->
+                <div class="tc">
+                  <div class="tc-y">2021 — 2023</div>
+                  <div class="tc-n">Analista de Compras · FreteBras</div>
+                  <div class="tc-d">
+                    Gestão ágil de projetos via Jira. Processo de compras de
+                    serviço, auditoria de despesas e desenvolvimento de
+                    dashboards/relatórios no Power BI, Google Data Studio e
+                    Excel.
+                  </div>
+                </div>
+
+                <!-- John Deere -->
+                <div class="tc">
+                  <div class="tc-y">2019 — 2021</div>
+                  <div class="tc-n">Estágio Supply Management · John Deere</div>
+                  <div class="tc-d">
+                    Suporte ao time de diretos, na parte de cotações e follow-up
+                    de fornecedores locais/internacionais. Desenvolvimento de
+                    relatórios e automações de processos utilizando VBA para
+                    conecatar ao SAP.
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-nav">
+                <button class="tl-btn tl-prev" aria-label="anterior">←</button>
+                <button class="tl-btn tl-next" aria-label="próximo">→</button>
+                <span class="tl-hint">use as setas para ver mais</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOCO: FORMAÇÃO -->
+          <div class="timeline-block">
+            <span class="chip">Formação</span>
+            <div class="timeline-wrap">
+              <div class="timeline-scroll">
+                <!-- Graduação Atual -->
+                <div class="tc">
+                  <div class="tc-y">2024 — Atual</div>
+                  <div class="tc-n">Graduação em Ciência da Computação</div>
+                  <div class="tc-d">UFCAT</div>
+                </div>
+
+                <!-- Pós-Graduação -->
+                <div class="tc">
+                  <div class="tc-y">2023 — 2024</div>
+                  <div class="tc-n">
+                    Pós-Graduação em Desenvolvimento Full Stack
+                  </div>
+                  <div class="tc-d">PUC-Rio</div>
+                </div>
+
+                <!-- Engenharia de Produção -->
+                <div class="tc">
+                  <div class="tc-y">2021</div>
+                  <div class="tc-n">Gaduação em Engenharia de Produção</div>
+                  <div class="tc-d">UFG</div>
+                </div>
+              </div>
+              <div class="timeline-nav">
+                <button class="tl-btn tl-prev" aria-label="anterior">←</button>
+                <button class="tl-btn tl-next" aria-label="próximo">→</button>
+                <span class="tl-hint">use as setas para ver mais</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section-sobre py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6">
-            <h3>Sobre mim</h3>
-            <p class="subtitle">Estudante de programação</p>
-            <div class="text-desciption fw-light pe-2">
-              <p class="mb-2">Formada em Engenharia de Produção pela UFG e pós graduada em Desenvolvimento Full Stack pela PUC-RJ, atualmente estudo Ciência da Computação.</p>
-              <p class="mb-2">Tenho experiência em compras, com foco além das atividades gerais, também em projetos de automatização de tarefas utilizando metodologias ágeis.</p>
-              <p class="mb-2">Passo por uma transição de carreira onde busco implementar os conhecimentos adquiridos em estudos e durante minha trajetória, para isso almejo  uma oportunidade para atuar na área de TI, com programação.</p>
+
+    <!-- PROJETOS -->
+    <section class="sec-proj" id="projetos">
+      <div class="sec-hd">
+        <h2 class="sec-hd-t">PROJETOS</h2>
+        <span class="sec-hd-sub">04 selecionados</span>
+      </div>
+      <div class="proj-grid">
+        <a
+          href="https://github.com/lbsilva8/puc-mvp2-front"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+        >
+          <img
+            src="./assets/img/projetos/projeto1.PNG"
+            alt="Meu Jardim Virtual"
+          />
+          <div class="proj-card-body">
+            <span class="proj-card-num">01</span>
+            <div class="proj-card-arrow">↗</div>
+            <div class="proj-card-techs">
+              <span class="proj-card-tech">React</span>
+              <span class="proj-card-tech">JavaScript</span>
+              <span class="proj-card-tech">CSS</span>
+            </div>
+            <div class="proj-card-name">Meu Jardim Virtual</div>
+            <div class="proj-card-desc">
+              Portal de informações sobre plantas com lista de espécies e
+              páginas de detalhes individuais.
             </div>
           </div>
-          <div class="col-12 col-lg-6 text-center p-3">
-            <img src="./assets/img/fotoPerfil.png" class="image-profile img-fluid" alt="foto de perfil">
+        </a>
+        <a
+          href="https://github.com/lbsilva8/marte-101-api"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+        >
+          <img src="./assets/img/projetos/projeto2.PNG" alt="Marte 101" />
+          <div class="proj-card-body">
+            <span class="proj-card-num">02</span>
+            <div class="proj-card-arrow">↗</div>
+            <div class="proj-card-techs">
+              <span class="proj-card-tech">TypeScript</span>
+              <span class="proj-card-tech">MySQL</span>
+              <span class="proj-card-tech">Docker</span>
+            </div>
+            <div class="proj-card-name">Marte 101</div>
+            <div class="proj-card-desc">
+              Backend em equipe com autenticação JWT, banco MySQL e envio de
+              e-mails com Nodemailer.
+            </div>
           </div>
+        </a>
+        <a
+          href="https://github.com/lbsilva8/Front_WitchBook_project"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+        >
+          <img src="./assets/img/projetos/projeto3.PNG" alt="WitchBook" />
+          <div class="proj-card-body">
+            <span class="proj-card-num">03</span>
+            <div class="proj-card-arrow">↗</div>
+            <div class="proj-card-techs">
+              <span class="proj-card-tech">React</span>
+              <span class="proj-card-tech">TypeScript</span>
+              <span class="proj-card-tech">MongoDB</span>
+            </div>
+            <div class="proj-card-name">WitchBook</div>
+            <div class="proj-card-desc">
+              Sistema de pesquisa de livros desenvolvido na Semana do Herói –
+              Hero Code.
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://github.com/lbsilva8/nlw_journey_back"
+          target="_blank"
+          rel="noopener"
+          class="proj-card"
+        >
+          <img src="./assets/img/projetos/nlw.PNG" alt="NLW Journey" />
+          <div class="proj-card-body">
+            <span class="proj-card-num">04</span>
+            <div class="proj-card-arrow">↗</div>
+            <div class="proj-card-techs">
+              <span class="proj-card-tech">Python</span>
+              <span class="proj-card-tech">Flask</span>
+              <span class="proj-card-tech">SQLite</span>
+            </div>
+            <div class="proj-card-name">NLW Journey</div>
+            <div class="proj-card-desc">
+              Backend de cadastro de viagens com confirmação por e-mail — NLW
+              Rocketseat 2024.
+            </div>
+          </div>
+        </a>
       </div>
     </section>
-    <section class="section-projetos py-5">
-      <div class="container text-center">
-        <h1 class="mb-5">Meus projetos</h1>
-        <div class="row align-items-start">
-          <div class="div-projetos col-12 col-xl-4 p-3">
-            <img src="./assets/img/projetos/projeto1.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
-            <h5 class="m-3">
-              <a href="https://github.com/lbsilva8/puc-mvp2-front" target="_blank" class="subtitle text-decoration-none ">Meu jardim virtual</a>
-            </h5>
-            <p class="text-desciption-project fw-light font-size-">
-              Pojeto desenvolvido durante a pós graduação: <br>
-              meu jardim virtual é um projeto que traz informações sobre plantas. Temos uma página inicial com a explicação do projeto, uma página com a lista de plantas e suas caracteristicas e uma página com detalhes da planta escollhida.
-            </p>
-              <div class="language align-items-center">
-                <img src="./assets/img/tecnologias/react.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/js.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/html.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/css.png" alt="Imagem tecnologia">
-              </div>
-          </div>
-          <div class="div-projetos col-12 col-xl-4 p-3">
-            <img src="./assets/img/projetos/projeto2.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
-            <h5 class="m-3">
-              <a href="https://github.com/lbsilva8/marte-101-api" target="_blank" class="subtitle text-decoration-none ">Marte 101</a>
-            </h5>
-            <p class="text-desciption-project fw-light font-size-">
-              Pojeto desenvolvido durante o Orion bootcamp:<br>
-              Backend desenvolvido em equipe e contando com POs. Foi utilizado mysql como banco de dados, jwt para autenticação de usuário e nodemailer para serviço de envio de e-mails. Nessa aplicação teremos a parte de usuário, onde poderá ser realizado o cadastro, recuperação de senha, bem como login/logout e também a parte logada, onde o usuário poderá acessar os dados dos sois e suas informações por meio de uma API externa.
-            </p>
-              <div class="language align-items-center">
-                <img src="./assets/img/tecnologias/typescript.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/mysql.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/docker.png" alt="Imagem tecnologia">
-              </div>
-          </div>
-          <div class="div-projetos col-12 col-xl-4 p-3">
-            <img src="./assets/img/projetos/projeto3.PNG" class="img-project rounded mx-auto d-block width" alt="Imagem projeto">
-            <h5 class="m-3">
-              <a href="https://github.com/lbsilva8/Front_WitchBook_project" target="_blank" class="subtitle text-decoration-none ">WitchBook</a>
-            </h5>
-            <p class="text-desciption-project fw-light font-size-">
-              Projeto desenvolvido durante a semana do heroi - Hero Code:<br>
-              Sistema de pesquisa de livros.
-            </p>
-              <div class="language align-items-center">
-                <img src="./assets/img/tecnologias/react.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/typescript.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/tailwindcss.png" alt="Imagem tecnologia">
-                <img src="./assets/img/tecnologias/mongo.png" alt="Imagem tecnologia">
-              </div>
-          </div>
-          <div class="div-projetos col-12 col-xl-4 p-3">
-            <img src="./assets/img/projetos/nlw.PNG" class="img-project rounded mx-auto d-block width" alt="nlw projeto">
-            <h5 class="m-3">
-              <a href="https://github.com/lbsilva8/nlw_journey_back" target="_blank" class="subtitle text-decoration-none ">NLW-Journey</a>
-            </h5>
-            <p class="text-desciption-project fw-light font-size-">
-              Projeto backend desenvolvido durante a NLW Journey 2024:<br>
-              Sistema de cadastro de viagens, onde é possivel criar, encontrar e confirmar viagens e participantes, bem como criar atividades e links relacionados a viagem.
-              Além disso é enviado um email ao usuário para que ele possa confirmar a viagem cadastrada.
-            </p>
-              <div class="language align-items-center">
-                <img src="./assets/img/tecnologias/python.png" alt="Imagem python">
-                <img src="./assets/img/tecnologias/sqlite.png" alt="Imagem sqlite">
-                <img src="./assets/img/tecnologias/flask.png" alt="Imagem flask">
-              </div>
-          </div>
+
+    <!-- CONTATOS -->
+    <section class="sec-ct" id="contatos">
+      <div class="ct-top">
+        <h2 class="ct-h">VAMOS<br /><span class="yo">CONVERSAR</span></h2>
+        <div class="avail-pill">
+          <span class="avail-dot"></span>
+          Disponível agora
+        </div>
+      </div>
+      <div class="ct-grid">
+        <a href="mailto:sborges.lorena@gmail.com" class="ct-card">
+          <span class="ct-lbl">E-mail</span>
+          <span class="ct-val">sborges.lorena@gmail.com</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lorenadasilvaborges/"
+          target="_blank"
+          rel="noopener"
+          class="ct-card"
+        >
+          <span class="ct-lbl">LinkedIn</span>
+          <span class="ct-val">/in/lorenadasilvaborges</span>
+        </a>
+        <div class="ct-note">
+          <p>
+            Residente em Catalão-GO, disponível para mudanças e trabalho remoto.
+          </p>
         </div>
       </div>
     </section>
-    <section class="section-contatos py-5">
-      <div class="container text-center">
-        <h1 class="mb-5">Meus Contatos</h1>
-        <div class="row mb-5">
-          <div class="col-12 col-lg-6">
-            <div class="d-flex icone-contato">
-              <img src="./assets/img/contatos/telefone.png" alt="celular">
-              <a href="tel:5564999428742" target="_blank" class="text-desciption text-decoration-none ">(64) 9 9942-8742</a>
-            </div>
-            <div class="d-flex icone-contato">
-              <img src="./assets/img/contatos/email.png" alt="email">
-              <a href="mailto:sborges.lorena@gmail.com" target="_blank" class="text-desciption text-decoration-none ">sborges.lorena@gmail.com</a>
-            </div>
-            <div class="d-flex icone-contato">
-              <img src="./assets/img/contatos/github.png" alt="github">
-              <a href="https://github.com/lbsilva8" target="_blank" class="text-desciption text-decoration-none ">@lbsilva8</a>
-            </div>
-            <div class="d-flex icone-contato">
-              <img src="./assets/img/contatos/linkedin.png" alt="linkedin">
-              <a href="https://www.linkedin.com/in/lorenadasilvaborges/" target="_blank" class="text-desciption text-decoration-none ">@Lorena Borges</a>
-            </div>
-          </div>
-          <div class="text-desciption col-12 col-lg-6 text-center ">
-            <p class="mb-2 fw-bold">Informações: </p>
-            <p class="mb-2 ">Atualmente residindo em Catalão-GO 
-                        <br>Disponivel para mudanças <br>
-            </p>
-          </div>
-        </div>
-        <p class="subtitle text-end fw-light">Designed & Developed by <br>Lorena Borges  *2024<br></p>
-      </div>
-    </section>
+
+    <footer>
+      <span>Lorena Borges @2026</span>
+    </footer>
+
+    <!-- Arquivo de Scripts Externo -->
+    <script src="script.js"></script>
   </body>
 </html>
