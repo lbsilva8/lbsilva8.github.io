@@ -606,27 +606,41 @@ nav.stuck {
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  /* Aumentado o espaço entre os cards para maior respiro */
+  gap: 2.5rem;
+  /* Aumentado para dar mais respiro aos blocos */
 }
 
 .proj-card {
   position: relative;
   border-radius: 12px;
-  /* Cantos mais suaves e modernos */
   overflow: hidden;
   aspect-ratio: 16/10;
-  /* Proporção widescreen elegante */
   background: var(--s1);
   border: 1px solid var(--bf);
   text-decoration: none;
   display: block;
-  transition: border-color 0.3s, transform 0.3s;
+  /* Transição suave de cor, borda e sombra */
+  transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+
+  /* Sombra sutil inicial para destacar do fundo geral */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.proj-card:hover {
+/* Alteração crucial: Cores vivas no hover dependendo do tema ativo */
+[data-theme='dark'] .proj-card:hover {
   border-color: var(--p2);
-  transform: translateY(-2px);
+  /* Roxo claro acende no Dark */
+  box-shadow: 0 12px 30px rgba(123, 94, 245, 0.2);
+  /* Glow roxo sutil */
+  transform: translateY(-4px);
+}
+
+[data-theme='light'] .proj-card:hover {
+  border-color: var(--p);
+  /* Roxo principal destaca no Light */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  /* Sombra limpa de elevação */
+  transform: translateY(-4px);
 }
 
 .proj-card img {
@@ -634,33 +648,38 @@ nav.stuck {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(0.2) brightness(0.9);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s;
+  /* Imagem ligeiramente mais nítida por padrão */
+  filter: grayscale(0.1) brightness(0.95);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
 }
 
 .proj-card:hover img {
-  transform: scale(1.03);
-  filter: grayscale(0) brightness(0.7);
+  transform: scale(1.02);
+  /* Clareia a imagem no hover para destacar o projeto, mantendo legibilidade */
+  filter: grayscale(0) brightness(0.85);
 }
 
-/* Removido o efeito bruto de sumir com o texto. Agora é integrado por cima com transparência fina */
+/* Gradiente suavizado para não sufocar as cores da imagem interna */
 .proj-card-body {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 2rem;
+  padding: 2.2rem;
+  /* Transição no fundo para suavizar a troca de tema */
+  transition: background 0.45s ease;
   background: linear-gradient(to top,
-      rgba(8, 8, 16, 0.95) 0%,
-      rgba(8, 8, 16, 0.6) 40%,
+      rgba(8, 8, 16, 0.9) 0%,
+      rgba(8, 8, 16, 0.4) 50%,
       transparent 100%);
 }
 
+/* Ajuste do gradiente do modo claro para não acinzentar as imagens */
 [data-theme='light'] .proj-card-body {
   background: linear-gradient(to top,
-      rgba(247, 244, 238, 0.98) 0%,
-      rgba(247, 244, 238, 0.6) 40%,
+      rgba(247, 244, 238, 0.95) 0%,
+      rgba(247, 244, 238, 0.3) 55%,
       transparent 100%);
 }
 
@@ -673,7 +692,7 @@ nav.stuck {
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--fg2);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .proj-card-arrow {
@@ -703,225 +722,51 @@ nav.stuck {
 
 .proj-card-techs {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.45rem;
   flex-wrap: wrap;
   margin-bottom: 0.6rem;
 }
 
-/* Tags mais discretas e harmoniosas */
+/* Pílulas de tecnologia ganham um contorno mais limpo */
 .proj-card-tech {
   font-family: 'Cabinet Grotesk', sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.02em;
   text-transform: none;
-  background: var(--ghost);
+  background: var(--s3);
+  /* Usa a cor de superfície interna para criar contraste */
   border: 1px solid var(--bf);
   color: var(--p2);
-  padding: 0.15rem 0.6rem;
+  padding: 0.2rem 0.65rem;
   border-radius: 4px;
   font-weight: 500;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+[data-theme='light'] .proj-card-tech {
+  color: var(--p);
+  /* Inverte para o roxo mais forte no modo claro */
+  background: var(--s2);
+}
+
+.proj-card:hover .proj-card-tech {
+  border-color: var(--p2);
 }
 
 .proj-card-name {
   font-family: 'Unbounded', sans-serif;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  /* Um pouco maior para melhor leitura */
   letter-spacing: -0.02em;
   color: var(--fg);
   line-height: 1.2;
   margin-bottom: 0.4rem;
 }
 
-/* Descrição visível de forma contínua e limpa */
 .proj-card-desc {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: var(--fg2);
   line-height: 1.5;
-}
-
-/* ── CONTATOS ── */
-.sec-ct {
-  background: var(--s1);
-  padding: 6rem 4rem;
-}
-
-.ct-top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--bf);
-  padding-bottom: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.ct-h {
-  font-family: 'Unbounded', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 5.5vw, 6rem);
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-}
-
-.ct-h .yo {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--fg3);
-}
-
-.avail-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(99, 215, 154, 0.4);
-  color: #63d79a;
-  border-radius: 100px;
-  padding: 0.45rem 1.1rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.avail-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #63d79a;
-  animation: blink 2s infinite;
-  display: block;
-}
-
-.ct-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.ct-card {
-  background: var(--s2);
-  border: 1px solid var(--bf);
-  border-radius: 6px;
-  padding: 1.4rem 1.6rem;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  transition: border-color 0.2s, transform 0.2s, background 0.2s;
-}
-
-.ct-card:hover {
-  border-color: var(--p);
-  transform: translateY(-3px);
-  background: var(--p3);
-}
-
-.ct-lbl {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--fg3);
-}
-
-.ct-val {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--fg);
-}
-
-.ct-note {
-  grid-column: span 2;
-  background: var(--s2);
-  border: 1px solid var(--bf);
-  border-radius: 6px;
-  padding: 2rem 2.25rem;
-}
-
-.ct-note p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--fg2);
-}
-
-footer {
-  background: var(--bg);
-  border-top: 1px solid var(--bf);
-  padding: 1.4rem 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--fg3);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-}
-
-footer span {
-  color: var(--p2);
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 960px) {
-  nav {
-    padding: 1.1rem 1.5rem;
-  }
-
-  .nav-r a {
-    display: none;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .hero-r {
-    display: none;
-  }
-
-  .hero-l {
-    padding: 8rem 1.5rem 5rem;
-  }
-
-  .skill-bar {
-    padding: 1.25rem 1.5rem;
-  }
-
-  .sec-sobre,
-  .sec-proj,
-  .sec-ct {
-    padding: 4rem 1.5rem;
-  }
-
-  .sobre-g {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .proj-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .ct-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ct-note {
-    grid-column: span 1;
-  }
-
-  .ct-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
-
-  footer {
-    padding: 1.2rem 1.5rem;
-    flex-direction: column;
-    gap: 0.25rem;
-    text-align: center;
-  }
 }
